@@ -27,8 +27,7 @@ function App() {
         {/* Set up BrowserRouter for routing */}
         <BrowserRouter>
           {/* Display the Navbar component */}
-          <Navbar/>
-
+          <Navbar isLoggedIn={isLoggedIn} handleLogout={handleLogout} />
           {/* Set up the Routes for different pages */}
           <Routes>
           <Route path="/" element={<Landing_Page />} />
