@@ -1,4 +1,5 @@
 import "./Navbar.css";
+import { Link, useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 
 const Navbar = () => {
@@ -35,15 +36,15 @@ const Navbar = () => {
                     <a href="#">Appointments</a>
                 </li>
                 <li className="link">
-                    <a href="../Sign_Up/Sign_Up.html">
-                        <button className="btn1">Sign Up</button>
-                    </a>
+                <Link to="/signup">
+                <button className="btn1">Sign Up</button>
+              </Link>
                 </li>
                 <li className="link">
-                    <a href="../Login/Login.html">
-                        <button className="btn1">Login</button>
-                    </a>
-                </li>
+              <Link to="/login">
+                <button className="btn1">Login</button>
+              </Link>
+            </li>
             </ul>
         </nav>
     );
