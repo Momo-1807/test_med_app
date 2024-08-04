@@ -9,7 +9,11 @@ import Navbar from './Components/Navbar/Navbar';
 import Landing_Page from './Components/Landing_Page/Landing_Page';
 import Login from './Components/Login/Login';
 import SignUp from './Components/Sign_Up/Sign_Up';
+import FindDoctorSearchIC from './Components/InstantConsultation/FindDoctorSearchIC/FindDoctorSearchIC';
+import DoctorCardIC from './Components/InstantConsultation/DoctorCardIC/DoctorCardIC';
+import AppointmentFormIC from './Components/InstantConsultation/AppointmentFormIC/AppointmentFormIC';
 import InstantConsultation from './Components/InstantConsultation/InstantConsultation';
+import BookingConsultation from './Components/BookingConsultation';
 
 // Function component for the main App
 function App() {
@@ -34,8 +38,12 @@ function App() {
           <Route path="/" element={<Landing_Page />} />
           <Route path="/login" element={<Login handleLogin={handleLogin} />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/find-doctor" element={<FindDoctorSearchIC />} />
+          <Route path="/doctor-card" element={<DoctorCardIC />} />
+          <Route path="/appointment-form" element={<AppointmentFormIC />} />
           <Route path="/instant-consultation" element={<InstantConsultation />} />
-            {/* Define individual Route components for different pages */}
+          <Route path="/booking-consultation" element={<BookingConsultation />} />
+          {/* Define individual Route components for different pages */}
           </Routes>
         </BrowserRouter>
     </div>

@@ -71,7 +71,7 @@ const Navbar = () => {
          <Link to="/reviews">Reviews</Link>
         </li>
         <li className="link">
-          <Link to="/instant-consultation">
+          <Link to="/instant-consultation" onClick={() => navigate("/search/doctors")}>
             <button className="btn1">Booking</button>
           </Link>
         </li>
