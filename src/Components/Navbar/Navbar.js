@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import "./Navbar.css";
 
@@ -11,6 +11,7 @@ const Navbar = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [userName, setUserName] = useState("");
     const[email,setEmail]=useState("");
+    const navigate = useNavigate();
     const [showDropdown, setShowDropdown] = useState(false);
     const handleClick = () => setClick(!click);
 
@@ -68,6 +69,11 @@ const Navbar = () => {
         </li>
         <li className="link">
          <Link to="/reviews">Reviews</Link>
+        </li>
+        <li className="link">
+          <Link to="/instant-consultation">
+            <button className="btn1">Booking</button>
+          </Link>
         </li>
         {isLoggedIn?(
           <>
