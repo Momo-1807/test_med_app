@@ -14,6 +14,7 @@ import DoctorCardIC from './Components/InstantConsultation/DoctorCardIC/DoctorCa
 import AppointmentFormIC from './Components/InstantConsultation/AppointmentFormIC/AppointmentFormIC';
 import InstantConsultation from './Components/InstantConsultation/InstantConsultation';
 import BookingConsultation from './Components/BookingConsultation';
+import Notification from './Components/Notification/Notification';
 
 // Function component for the main App
 function App() {
@@ -34,6 +35,7 @@ function App() {
           {/* Display the Navbar component */}
           <Navbar isLoggedIn={isLoggedIn} handleLogout={handleLogout} />
           {/* Set up the Routes for different pages */}
+         <Notification>
           <Routes>
           <Route path="/" element={<Landing_Page />} />
           <Route path="/login" element={<Login handleLogin={handleLogin} />} />
@@ -43,8 +45,10 @@ function App() {
           <Route path="/appointment-form" element={<AppointmentFormIC />} />
           <Route path="/instant-consultation" element={<InstantConsultation />} />
           <Route path="/booking-consultation" element={<BookingConsultation />} />
+            <Route path="/notification" element={<Notification />} />
           {/* Define individual Route components for different pages */}
           </Routes>
+          </Notification>
         </BrowserRouter>
     </div>
   );
