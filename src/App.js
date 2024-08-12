@@ -15,6 +15,7 @@ import AppointmentFormIC from './Components/InstantConsultation/AppointmentFormI
 import InstantConsultation from './Components/InstantConsultation/InstantConsultation';
 import BookingConsultation from './Components/BookingConsultation';
 import Notification from './Components/Notification/Notification';
+import ReviewForm from './Components/ReviewForm/ReviewForm';
 
 // Function component for the main App
 function App() {
@@ -45,7 +46,7 @@ function App() {
           <Route path="/appointment-form" element={<AppointmentFormIC />} />
           <Route path="/instant-consultation" element={<InstantConsultation />} />
           <Route path="/booking-consultation" element={<BookingConsultation />} />
-            <Route path="/notification" element={<Notification />} />
+          <Route path="/reviews" element={<ReviewForm />} />
           {/* Define individual Route components for different pages */}
           </Routes>
           </Notification>
