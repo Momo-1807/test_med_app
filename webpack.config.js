@@ -2,7 +2,7 @@
 const path = require('path');
 
 // Import the UglifyJsPlugin, which is used for minifying JavaScript code
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 // Import the MiniCssExtractPlugin, which is used for extracting CSS into a separate file
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -40,11 +40,13 @@ module.exports = {
       },
     ],
   },
-
+optimization: {
+  minimize: true,
+  minimizer: [new TerserPlugin()],
+},
   // Specify an array of plugins to use
   plugins: [
     // Use the UglifyJsPlugin to minify the JavaScript code
-    new UglifyJsPlugin(),
     // Use the MiniCssExtractPlugin to extract CSS into a separate file
     new MiniCssExtractPlugin({ filename: 'styles.css' }),
   ],
